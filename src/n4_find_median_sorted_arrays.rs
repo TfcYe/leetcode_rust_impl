@@ -10,7 +10,7 @@ impl Solution {
             } else {
                 if len2 % 2 == 0 {
                     let v = len2 / 2;
-                    return ((nums2[v] + nums2[v-1]) as f64)/2.0;
+                    return ((nums2[v] + nums2[v - 1]) as f64) / 2.0;
                 } else {
                     let v = len2 / 2;
                     return nums2[v] as f64;
@@ -23,7 +23,7 @@ impl Solution {
             } else {
                 if len1 % 2 == 0 {
                     let v = len1 / 2;
-                    return ((nums1[v] + nums1[v-1]) as f64)/2.0;
+                    return ((nums1[v] + nums1[v - 1]) as f64) / 2.0;
                 } else {
                     let v = len1 / 2;
                     return nums1[v] as f64;
@@ -34,7 +34,7 @@ impl Solution {
         let mut flag = 0;
         let mut times = 0;
         let len_sum = len1 + len2;
-        
+
         if len_sum % 2 == 0 {
             flag = 2;
             limit = len_sum / 2 + 1
@@ -70,9 +70,9 @@ impl Solution {
         }
         let l = ans.len();
         if flag == 2 {
-           return  ((ans[l-1] + ans[l-2]) as f64)/2.0;
+            return ((ans[l - 1] + ans[l - 2]) as f64) / 2.0;
         } else {
-            return ans[l-1] as f64;
+            return ans[l - 1] as f64;
         }
     }
 }
@@ -81,11 +81,17 @@ pub struct Solution;
 
 #[cfg(test)]
 mod tests {
-    use super:: Solution;
+    use super::Solution;
 
     #[test]
     fn test_4() {
-        assert_eq!(Solution::find_median_sorted_arrays(vec![1, 3], vec![2]), 2.0);
-        assert_eq!(Solution::find_median_sorted_arrays(vec![1, 2], vec![3, 4]), 2.5);
+        assert_eq!(
+            Solution::find_median_sorted_arrays(vec![1, 3], vec![2]),
+            2.0
+        );
+        assert_eq!(
+            Solution::find_median_sorted_arrays(vec![1, 2], vec![3, 4]),
+            2.5
+        );
     }
 }

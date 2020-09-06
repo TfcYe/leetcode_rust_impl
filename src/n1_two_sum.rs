@@ -7,7 +7,7 @@ impl Solution {
             let nums_index = target - value;
             if nums_indexs.contains_key(&nums_index) {
                 return vec![nums_indexs[&nums_index], key];
-             }
+            }
             nums_indexs.insert(value, key);
             key += 1;
         }
