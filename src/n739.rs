@@ -1,6 +1,6 @@
 impl Solution {
     pub fn daily_temperatures(t: Vec<i32>) -> Vec<i32> {
-        let res: Vec<i32> = vec![];
+        let mut res: Vec<i32> = vec![];
 
         for i in 0..t.len() {
             let mut days = 0;
