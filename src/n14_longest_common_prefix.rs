@@ -1,16 +1,32 @@
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
+        let mut res = String::new();
+        let mut iterators = Vec::new();
+
         if strs.len() == 0 {
-            return String::from("");
+            return res;
         }
 
-        let prefix = &strs[0];
-
-        for p in prefix.chars() {
-            println!("{}", p);
+        for in_str in &strs {
+            iterators.push(in_str.chars());
         }
 
-        String::from("")
+        loop {
+            let tmp = match iterators[0].next() {
+                Some(char_in) => Some(char_in),
+                None => return res,
+            };
+
+            for iter in &mut iterators[1..] {
+                if iter.next() == tmp {
+                    continue;
+                } else {
+                    return res;
+                }
+            }
+            
+            res.push(tmp.unwrap());
+        }
     }
 }
 

@@ -1,4 +1,5 @@
-use super::infrastructure::linked_list::{to_list, ListNode};
+use super::infrastructure::linked_list::ListNode;
+
 impl Solution {
     pub fn add_two_numbers(
         l1: Option<Box<ListNode>>,
@@ -41,6 +42,7 @@ pub struct Solution;
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::infrastructure::linked_list::to_list;
 
     #[test]
     fn test_2() {
