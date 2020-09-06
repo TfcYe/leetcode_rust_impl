@@ -24,7 +24,7 @@ impl Solution {
                     return res;
                 }
             }
-            
+
             res.push(tmp.unwrap());
         }
     }
