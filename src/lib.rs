@@ -8,3 +8,4 @@ pub mod n350_intersect;
 pub mod n3_length_of_longest_substring;
 pub mod n4_find_median_sorted_arrays;
 pub mod n7_reverse;
+pub mod n49_group_anagrams;
